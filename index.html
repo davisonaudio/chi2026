@@ -353,7 +353,7 @@
     </div>
   </div>
 </section>
-<!-- End Implementation -->
+<!-- End Background -->
 
 
 <!-- Image carousel -->
@@ -398,7 +398,31 @@
 <!-- End image carousel -->
 
 
+<!-- How it works -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">How the System Works</h2>
+        
+        <div class="has-text-centered">
+          <img src="./static/images/hapticoupler_system.jpg" alt="The HaptiCoupler system with amplifier PCB (including the Teensy 4.0) and voice coil" style="width: 100%; height: auto;"/>
+        </div>
 
+        <div class="content has-text-justified mt-5">
+          <p>
+          The HaptiCoupler system used in this study uses single voice coil transducer to both sense and actuate vibrations. By actuating a voltage and sensing a current, it can achieve both functionalities simultaneously. Due to Ohm's law, the actuated voltage will also induce a current, causing crosstalk between actuation and sensing. This is mitigated by using a digital filter model of the voice coil's electrical admittance to cancel the crosstalk from the actuation signal, leaving only the current induceed by external forces.
+          <br>
+          Additionally, when the voice coil is pressed, this increases the mechanical damping of the voice coil, leading to a reduction in the peak of the electrical impedance at the resonant frequency. This is sensed (and provided as an additional control parameter) by measuring the change in level of a low level tone actuated at the resonant frequency.
+          <br>
+          The system uses a Teensy 4.0 microcontroller to perform the cancellation and tone sensing DSP, acting as a USB audio/midi interface. A MAX98389 current sensing amplifier is used to sense current and actuate voltage at 44.1kHz. Further details can be found in the <a href="/static/pdfs/davison_mcpherson_chi2026.pdf" target="_blank">full paper</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End How it works -->
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
